@@ -1,24 +1,18 @@
 
-import java.util.ArrayList;
-
-public class Student 
+public class Professor 
 {
-	
 	private String firstName;
 	private String lastName;
-	private int idNumber;
 	private String email;
-	private ArrayList<Course> courses = new ArrayList<Course>(2);
+	private int phoneNum;
 	
-	public Student(String firstName, String lastName, int idNumber, String email, ArrayList<Course> courses) 
+	public Professor(String firstName, String lastName, String email, int phoneNum)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.idNumber = idNumber;
 		this.email = email;
-		this.courses = courses;
+		this.phoneNum = phoneNum;
 	}
-	
 	
 	//SETTERS AND GETTERS
 	public String getFirstName() 
@@ -41,15 +35,10 @@ public class Student
 		this.lastName = lastName;
 	}
 	
-	public int getIdNumber() 
+	public String getName()
 	{
-		return this.idNumber;
+		return(getFirstName() + " " + getLastName());
 	}
-	
-	public void setIdNumber(int idNumber) 
-	{
-		this.idNumber = idNumber;
-	}	
 	
 	public String getEmail()
 	{
@@ -61,13 +50,13 @@ public class Student
 		this.email = email;
 	}
 	
-	public ArrayList<Course> getCourses()
+	public int getPhoneNum()
 	{
-		return this.courses;
+		return this.phoneNum;
 	}
 	
-	public void addCourse(Course course)
+	public void setPhoneNum(int phoneNum)
 	{
-		this.courses.add(course);
+		this.phoneNum = phoneNum;
 	}
 }

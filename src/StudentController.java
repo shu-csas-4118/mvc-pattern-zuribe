@@ -1,14 +1,17 @@
 
-public class StudentController {
+public class StudentController 
+{
 	private StudentView studentView;
 	private Student	student;
 	
-	public StudentController(Student student, StudentView studentView) {
+	public StudentController(Student student, StudentView studentView)
+	{
 		this.student = student;
 		this.studentView = studentView;
 	}
 	
-	public void printStudentDetails() {
+	public void printStudentDetails() 
+	{
 		this.studentView.printStudentDetails(this.student);
 	}
 }
